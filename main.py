@@ -1,4 +1,4 @@
-with open('files/cook_book.txt', 'rt', encoding="utf-8") as file:
+with open('files/recipes.txt', 'rt', encoding="utf-8") as file:
     cook_book = {}
     for line in file:
         dish = line.strip()
@@ -10,4 +10,7 @@ with open('files/cook_book.txt', 'rt', encoding="utf-8") as file:
             structure.append({'ingredients': ingredients, 'quantity': quantity, 'measure': measure})
         cook_book.update({dish:structure})
         file.readline()
-    print(cook_book)
+
+print(cook_book)
+
+
